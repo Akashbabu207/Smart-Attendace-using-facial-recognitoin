@@ -16,7 +16,7 @@ import shutil
 import csv
 import numpy as np
 from PIL import Image, ImageTk
-import pandas as pd
+import pandas as p
 import datetime
 import time
 import tkinter.ttk as ttk
@@ -32,8 +32,6 @@ from playsound import playsound
 import easyimap
 import urllib
 import urllib.request as ur
-login = 'jsrrengineeringcollegge@gmail.com'
-password = 'cseuser!'
 
 
 
@@ -283,19 +281,9 @@ def msg():
 
    
 def sms():
-    account_sid = 'ACe51f103084a424dec82971ee90c8851d' 
-    auth_token = '441ba6d7133a694dcd7d5c1ad29b1923' 
+  
 
-    myPhone = '+918838989606' 
-    TwilioNumber = '+19362458646' 
 
-    client = Client(account_sid, auth_token)
-    client.messages.create(
-            body="jothi prakash absent today",
-            to=myPhone,
-            from_=TwilioNumber,
-            media_url='https://raw.githubusercontent.com/programming-liftoff/twilio-python/master/python.png')
-    playsound("sms.mp3")
 
 def newmail():
     imapper = easyimap.connect('imap.gmail.com', login, password)
